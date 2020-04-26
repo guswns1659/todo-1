@@ -1,47 +1,28 @@
-## 1팀 그라운드 룰
+# 1. 프로젝트 소개
+GitHub의 Projects 기능을 클론한 Todo 어플리케이션 개발 프로젝트    
 
-### 스크럼과 회고
-- 스크럼 시간 : 매일 오전 11시 행아웃
-    - 지각비 : 2000원, 10분 단위 상한선 : 4000원, 결석 : 5000원 
-    - 주소 업로드 : Jack 
-    - 내용 : 컨디션, 어제한 작업, 오늘 진행할 작업, 요구사항
-- 회고 : 매주 (금) 17:00 행아웃 
+# 2. 서비스 링크
+[서비스 링크]()
 
-<br />
+# 3. 사용기술
+- API 개발 : 스프링 프레임워크, 
+- API 배포 : AWS EC2, Nginx
+- 로그인 인증 : SpringBoot intercepter, JWT
+- 데이터베이스 : Mysql, Spring Data JDBC
 
-### 프로젝트 기획서
+# 4. 개발내용
+- 클라이언트 로그인 성공 시 JWT 토큰 발행 후 intercepter를 통해 인증 확인 
+- 클라이언트가 칸반 추가, 변경, 삭제, 이동시 시 요청 처리 후 응답하는 API 
 
-- [구글 스프레드 시트](https://docs.google.com/spreadsheets/d/1DkShjmfBf8RzglkOCMuAp0m-BCd8kF16DOo3RqA1c2c/edit?usp=sharing)
+# 5. 어려움과 해결책
+## 5.1 어려움 : 클라이언트 요청 시 Cors 문제 
+- 문제 : 인증 처리를 위해 인터셉터를 적용한 뒤 클라이언트가 요청할 때 Cors 문제 발생. 
+- 해결책 : 클라이언트의 Origin(5050)을 서버에서 통과시키는 코드 추가. 
 
-<br />
 
-### 프로젝트 프로세스
-- 이슈관리 : 깃허브 프로젝트 이용.
-- 빌드 결과물 공유 : FE에서 빌드 후 폴더 경로를 BE에 공유
+## 프로젝트 피드백
+- DB를 root 객체로 접근하지 않고 하위 객체를 직접 접근한 점. 
+    - DB 설계에 대한 충분한 고민을 한 뒤에 기능을 구현해보자. 
 
-<br />
-
-### 커밋 컨벤션
-
-- **[#이슈번호] 타입: 주제**
-- [#18] Feat: 기능 구현
-- [#19] Refactor: 리팩토링
-- [#20] Fix : 버그 해결
-- [#21] Docs : README 수정
-- [#22] Test : 기능 테스트 
-- [#23] Build : 빌드 작업
-- [#24] Chore : 제품코드 변경 X
-
-- [커밋 메시지로 이슈 닫기](http://minsone.github.io/git/github-commits-closing-issues-via-commit-messages)
-
-<br />
-
-### 브랜치 관리 
-- be/feature/mockupapi : 
-- fe/feature/skeleton : 
-- ios/feature/collectionview : 
-
-<br />
-
-### API Document
-- Mockup API와 실서버 API 요청 URL을 동시에 위키에 적어주기
+## Api 문서 
+[Api 문서](https://github.com/codesquad-member-2020/todo-1/wiki/Todo-Group1-API-%EB%AC%B8%EC%84%9C)
